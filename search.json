@@ -1,15 +1,243 @@
 [
   
     {
-      "title"    : "Template Blog",
-      "title-lower"    : "template blog",
+      "title"    : "Database Sycnroniser",
+      "title-lower"    : "database sycnroniser",
       "sub-titile" : "",
       "sub-titile-lower" : "",
-      "categories" : "blog",
+      "categories" : "C++git",
       "tags"     : "",
-      "url"      : "/blog/2022/08/11/template.html",
-      "date"     : "2022-08-11 13:03:36 +0300",
-      "content"     : "content descriptionMarkdown syntax guideHeadersThis is a Heading h1This is a Heading h2This is a Heading h6EmphasisThis text will be italicThis will also be italicThis text will be boldThis will al..."
+      "url"      : "/c++/git/2023/12/01/dbsync.html",
+      "date"     : "2023-12-01 00:00:01 +0300",
+      "content"     : "Developed a multithreaded database synchronizer for a video analytics system. Used a C++ for this. Video analytics application generates a lot of data and this application pushes data to different ..."
+    } ,
+  
+    {
+      "title"    : "Video Analytics People Heatmap Generator",
+      "title-lower"    : "video analytics people heatmap generator",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "PythonalgorithmsgitVideoAnalytics",
+      "tags"     : "",
+      "url"      : "/python/algorithms/git/video/analytics/2023/10/02/heatmp.html",
+      "date"     : "2023-10-02 00:00:01 +0300",
+      "content"     : "Developed a heatmap generator for video analytics system. Used a python for this. Used a pre-trained model for object detection. Used a python for processing and generating heatmaps.tech stack / ke..."
+    } ,
+  
+    {
+      "title"    : "Video Analytics People Counter Algorithm",
+      "title-lower"    : "video analytics people counter algorithm",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "PythonalgorithmsVideoAnalyticsgitGPU",
+      "tags"     : "",
+      "url"      : "/python/algorithms/videoanalytics/git/gpu/2023/10/01/peoplecounter.html",
+      "date"     : "2023-10-01 00:00:01 +0300",
+      "content"     : "Developed a people counter algorithm for video analytics system. Used a deep learning model for this. Used a pre-trained model. Model outputs are processed and counted by my algorithmtech stack / k..."
+    } ,
+  
+    {
+      "title"    : "Sketch Drawing Application",
+      "title-lower"    : "sketch drawing application",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "QtC++algorithmsgit",
+      "tags"     : "",
+      "url"      : "/qt/c++/algorithms/git/2023/09/01/sketch.html",
+      "date"     : "2023-09-01 00:00:01 +0300",
+      "content"     : "Developed a custom drawing application for inhouse usage. Integrated to company’s internal system.This application is used for sketching and drawing. It has a custom toolbar and custom widgets. It ..."
+    } ,
+  
+    {
+      "title"    : "Segment Anything Algorithm",
+      "title-lower"    : "segment anything algorithm",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "NvidiaGPUPythonalgorithmsgitVideoAnalytics",
+      "tags"     : "",
+      "url"      : "/nvidia/gpu/python/algorithms/git/videoanalytics/2023/06/01/segmentany.html",
+      "date"     : "2023-06-01 00:00:01 +0300",
+      "content"     : "Meta’s segment anything project used in some projects. I developed a algorithm for finding proper car parking areas. Used a deep learning model for this. I used a pre-trained model. Used a python f..."
+    } ,
+  
+    {
+      "title"    : "Smart Encoder",
+      "title-lower"    : "smart encoder",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "algorithmsC++gitDockerVideoAnalyticsPython",
+      "tags"     : "",
+      "url"      : "/algorithms/c++/git/docker/videoanalytics/python/2023/05/01/smartencoder.html",
+      "date"     : "2023-05-01 00:00:01 +0300",
+      "content"     : "Developed an algorithm which address a low bandwith infrastructure. It used via companies current video analytics system. It’s a commercial product developed for specific customer needs. It allows ..."
+    } ,
+  
+    {
+      "title"    : "Neural Radiance Fields",
+      "title-lower"    : "neural radiance fields",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "dockercudapythonpapers-with-code",
+      "tags"     : "",
+      "url"      : "/docker/cuda/python/papers-with-code/2023/05/01/nerf.html",
+      "date"     : "2023-05-01 00:00:01 +0300",
+      "content"     : "NERF repository is a collection of papers and codes about Neural Radiance Fields. It’s a new method for 3D scene representation and rendering. It’s a hot topic in computer graphics and computer vis..."
+    } ,
+  
+    {
+      "title"    : "Room Segmentation",
+      "title-lower"    : "room segmentation",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "crosembeddedalgorithmspapers-with-code",
+      "tags"     : "",
+      "url"      : "/c/ros/embedded/algorithms/papers-with-code/2023/04/01/roomsegment.html",
+      "date"     : "2023-04-01 00:00:00 +0300",
+      "content"     : "Room segmentation is a process of dividing a given space into rooms. This process is used in many applications such as robot navigation, room recognition, and room coverage.In this project, I worke..."
+    } ,
+  
+    {
+      "title"    : "Emebedded Test Framework Development",
+      "title-lower"    : "emebedded test framework development",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "C++C",
+      "tags"     : "",
+      "url"      : "/c++/c/2022/05/01/testfwdevel.html",
+      "date"     : "2022-05-01 00:00:02 +0300",
+      "content"     : "Developed a test framework for BMS board. Used for integration tests. Nasas JPL’s embedded-gcov is used as a base for the test framework.tech stack / keywords  C  lauterbach  python  embedded  git"
+    } ,
+  
+    {
+      "title"    : "Integration Test for Embedded Systems",
+      "title-lower"    : "integration test for embedded systems",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "CLauterbachJiragit",
+      "tags"     : "",
+      "url"      : "/c/lauterbach/jira/git/2022/05/01/embeddedintegration.html",
+      "date"     : "2022-05-01 00:00:01 +0300",
+      "content"     : "I’m the part of the team that developed the integration tests for the BMS board of an electric vehicle.The tests are developed according to the ASIL standard. The tests are developed in C language...."
+    } ,
+  
+    {
+      "title"    : "Data Loss Prevention Software",
+      "title-lower"    : "data loss prevention software",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "C++C",
+      "tags"     : "",
+      "url"      : "/c++/c/2021/11/01/dlp.html",
+      "date"     : "2021-11-01 00:00:01 +0300",
+      "content"     : "Data loss prevention software developed. It’s a windows service that monitors user activity and prevents data loss. It’s a commercial product.I develop some modules of this software.  printer  usb ..."
+    } ,
+  
+    {
+      "title"    : "Ventilation Device Development",
+      "title-lower"    : "ventilation device development",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "QtC++gitEmbeddedalgorithmsControl",
+      "tags"     : "",
+      "url"      : "/qt/c++/git/embedded/algorithms/control/2021/09/01/ventilation.html",
+      "date"     : "2021-09-01 00:00:01 +0300",
+      "content"     : "Developed a device control UI and control algorithm for a mechnanic device. Used while covid-19 pandemic.tech stack / keywords  Qt  C++  git  Embedded  Algorithm  Control"
+    } ,
+  
+    {
+      "title"    : "Material Test Device Framework",
+      "title-lower"    : "material test device framework",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "C++gitalgorithms",
+      "tags"     : "",
+      "url"      : "/c++/git/algorithms/2021/09/01/mattestframework.html",
+      "date"     : "2021-09-01 00:00:01 +0300",
+      "content"     : "Developed a test runner framework for material testing machine. It’s generic and highly configurable. I develop common test runner interface, and test runner plugins for each test type. Tensile tes..."
+    } ,
+  
+    {
+      "title"    : "Material Testing Machine GUI Development",
+      "title-lower"    : "material testing machine gui development",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "C++QtgitDesktopEmbedded",
+      "tags"     : "",
+      "url"      : "/c++/qt/git/desktop/embedded/2021/09/01/materialtesting.html",
+      "date"     : "2021-09-01 00:00:01 +0300",
+      "content"     : "Developed a GUI for material testing machine. Machine controlled via motion controller devices and GUI integrated to these devices. Test algotihms developed according to ASTM standards. Data filter..."
+    } ,
+  
+    {
+      "title"    : "First Time Installation Script",
+      "title-lower"    : "first time installation script",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Bashgit",
+      "tags"     : "",
+      "url"      : "/bash/git/2020/10/01/bash.html",
+      "date"     : "2020-10-01 00:00:01 +0300",
+      "content"     : "Bash script wrote for first time installation of application to Linux platforms.tech stack / keywords  Bash  git"
+    } ,
+  
+    {
+      "title"    : "Unit Test Development for C++ Repositories",
+      "title-lower"    : "unit test development for c++ repositories",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "C++GTestgitunit-test",
+      "tags"     : "",
+      "url"      : "/c++/gtest/git/unit-test/2020/08/01/unittest.html",
+      "date"     : "2020-08-01 00:00:01 +0300",
+      "content"     : "I’m the part of the team that developed the unit tests for company’s internal repositories. The tests are developed in C++ language. The tests are run on the GTest framework. The source code is man..."
+    } ,
+  
+    {
+      "title"    : "GUI Development",
+      "title-lower"    : "gui development",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "C++QtgitDesktopEmbedded",
+      "tags"     : "",
+      "url"      : "/c++/qt/git/desktop/embedded/2020/08/01/qtgui.html",
+      "date"     : "2020-08-01 00:00:01 +0300",
+      "content"     : "Developed a many gui applications and custom widgets for customer products. Windows, Linux and embedded platforms are supported. Mostly used Qt framework for development.tech stack / keywords  Qt  ..."
+    } ,
+  
+    {
+      "title"    : "Qt For MCUs application development",
+      "title-lower"    : "qt for mcus application development",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "cmakeqtembeddedmcuc++git",
+      "tags"     : "",
+      "url"      : "/cmake/qt/embedded/mcu/c++/git/2020/08/01/qtformcu.html",
+      "date"     : "2020-08-01 00:00:01 +0300",
+      "content"     : "Qt for MCUs offers a lightweight graphics framework and toolkit that enables you to design, develop, and deploy graphical user interfaces (GUI) on microcontrollers (MCU). It lets you run the applic..."
+    } ,
+  
+    {
+      "title"    : "Sensor Data Visualization",
+      "title-lower"    : "sensor data visualization",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "COpenGLEmbeddedSTM32F4Sensoralgorithmsgit",
+      "tags"     : "",
+      "url"      : "/c/opengl/embedded/stm32f4/sensor/algorithms/git/2020/06/01/openglcube.html",
+      "date"     : "2020-06-01 00:00:01 +0300",
+      "content"     : "In my internship i developed a application which visualizes a movement of real object. I used a STM32F4 board for sensor data collection. IMU, Gyro, Accelerometer sensors used for data collection. ..."
+    } ,
+  
+    {
+      "title"    : "Graduation Thesis",
+      "title-lower"    : "graduation thesis",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "MatlabCEmbeddedSTM32F4algorithmsgit",
+      "tags"     : "",
+      "url"      : "/matlab/c/embedded/stm32f4/algorithms/git/2020/01/01/thesis.html",
+      "date"     : "2020-01-01 00:00:01 +0300",
+      "content"     : "Embedded device and program developed for indoor mapping. ToF sensor data collected from device and processed on PC. Used STM32F4 as control board, used step motor for rotation, used ToF sensor for..."
     } 
   
 ]
