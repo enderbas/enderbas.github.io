@@ -1,6 +1,6 @@
 # blog-source
 
-Run this command for serve locally.
+Run this command for serve locally. 
 
 ``` sh
 bundle exec jekyll serve
