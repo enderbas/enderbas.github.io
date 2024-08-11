@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "IEEE 802.1X Implementation",
+      "title-lower"    : "ieee 802.1x implementation",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "Embedded",
+      "tags"     : "",
+      "url"      : "/embedded/2024/07/01/dot1x.html",
+      "date"     : "2024-07-01 00:00:01 +0300",
+      "content"     : "I implemented a private network with IEEE 802.1x support using a Cisco IE3000 switch. I cross-compiled the wpa_supplicant application for an embedded Linux device and successfully ran it on the sys..."
+    } ,
+  
+    {
+      "title"    : "Benchmark and Reporting Tool Developed",
+      "title-lower"    : "benchmark and reporting tool developed",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "cgit",
+      "tags"     : "",
+      "url"      : "/c/git/2024/05/01/cbench.html",
+      "date"     : "2024-05-01 00:00:01 +0300",
+      "content"     : "I developed a custom benchmarking tool for an internal C language application. This tool measures the execution times of code blocks and function calls, tracks runtime variables, and generates deta..."
+    } ,
+  
+    {
       "title"    : "Database Sycnroniser",
       "title-lower"    : "database sycnroniser",
       "sub-titile" : "",
