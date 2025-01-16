@@ -432,11 +432,11 @@ main .about .about-header .about-title { display: flex; flex-direction: column; 
 
 .post-wrapper { border-bottom: 1px solid #ececec; margin-bottom: 1rem; padding-bottom: 1rem; }
 
-.post-categories { list-style-type: none; margin: 0; padding: 0; }
+.post-tags { list-style-type: none; margin: 0; padding: 0; }
 
-.post-categories li { font-size: 14px; float: left; background-color: #e3e3e3; padding: 5px 20px; border-radius: 2px; margin-right: 10px; }
+.post-tags li { font-size: 14px; float: left; background-color: #e3e3e3; padding: 5px 20px; border-radius: 2px; margin-right: 10px; }
 
-@media screen and (max-width: 768px) { .post-categories li { margin-top: 5px; } }
+@media screen and (max-width: 768px) { .post-tags li { margin-top: 5px; } }
 
 .post-date { margin-right: 10px; color: #555; min-width: 150px; }
 
@@ -480,6 +480,12 @@ footer { display: none; }
 
 @media screen and (max-width: 768px) and (max-width: 480px) { footer.condensed { margin: 0 20px; } }
 
+.row { display: flex; flex-direction: row; }
+
+.column { flex: 1; }
+
+@media screen and (max-width: 768px) { .row { flex-direction: column-reverse; } .column { width: 100%; } .scaled-svg { margin-bottom: 1rem; } }
+
 /* Post Label And Search */
 /* Hack iOS Safari Unfocus */
 main { outline: none; min-height: 100vh; }
@@ -496,13 +502,19 @@ main { outline: none; min-height: 100vh; }
 
 .posts-labelgroup .search-results { display: flex; flex-direction: column; border-radius: 5px; border-top-left-radius: 0; border-top-right-radius: 0; position: absolute; background-color: #fff; min-width: 160px; width: 100%; min-height: 50px; box-shadow: 0 1px 2px 0 rgba(32, 33, 36, 0.28); z-index: 3; padding: 10px 0; font-size: 15px; border: 1px solid rgba(223, 225, 229, 0); }
 
-.posts-labelgroup .search-results:empty::before { content: attr(data-placeholder); padding: 8px 25px 8px 14px; }
+.posts-labelgroup .search-results:empty::before { content: attr(data-placeholder); padding: 8px 25px 8px 14px; color: #777; }
 
-.posts-labelgroup .search-results a { padding: 8px 25px 8px 14px; text-decoration: none; display: flex; background-color: transparent; }
+.posts-labelgroup .search-results a { padding: 12px 25px; text-decoration: none; display: block; background-color: transparent; border-bottom: 1px solid #eee; }
 
-.posts-labelgroup .search-results a:hover { color: black; background-color: #eee; }
+.posts-labelgroup .search-results a:last-child { border-bottom: none; }
 
-.posts-labelgroup .search-results a::before { content: '\e805'; font-family: "fontello"; font-style: normal; speak: none; display: inline-block; text-decoration: inherit; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: 'liga'; margin-right: 14px; padding: 0 3px; color: #9aa0a6; }
+.posts-labelgroup .search-results a:hover { background-color: #f8f9fa; }
+
+.posts-labelgroup .search-results a .search-title { color: #444; font-weight: 500; margin-bottom: 8px; }
+
+.posts-labelgroup .search-results a .search-tags { color: #666; font-size: 13px; margin-bottom: 6px; }
+
+.posts-labelgroup .search-results a .search-preview { color: #777; font-size: 13px; line-height: 1.4; }
 
 .posts-labelgroup .search-container { display: block; flex-grow: 1; position: relative; }
 
@@ -705,7 +717,7 @@ green     #859900  operators, other keywords
 
 .dark pre.highlight-dark, .dark code, .dark * pre.highlight-dark, .dark * code { font-family: 'Consolas', Menlo, monospace; line-height: 1.4em; tab-size: 4; }
 
-.dark .post-categories li, .dark * .post-categories li { background-color: #333; color: #fff; }
+.dark .post-tags li, .dark * .post-tags li { background-color: #333; color: #fff; }
 
 .dark a, .dark * a { color: #4da3ff; }
 
@@ -736,5 +748,7 @@ green     #859900  operators, other keywords
 .dark table th, .dark table td { border: 1px solid #333; }
 
 .dark table th { background-color: #0d0d0d; }
+
+@media screen and (max-width: 768px) { .row { display: flex; flex-direction: column-reverse; } .column { width: 100%; } .scaled-svg { margin-bottom: 1rem; } }
 
 /*# sourceMappingURL=style.css.map */
