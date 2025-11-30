@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Building a SaaS Platform from Scratch</title>
+<script>
+    var host = "enderbas.github.io";
+    if ((("enderbas.github.io" == window.location.host) || ("enderbas.com" == window.location.host)) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-98CQNT3HJL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-98CQNT3HJL');
+</script>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Building a SaaS Platform from Scratch | Engin Deniz Erbas - Portfolio</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Building a SaaS Platform from Scratch" />
+<meta name="author" content="enderbas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I developed solar energy system optimization tool, a comprehensive SaaS (Software as a Service) platform designed to democratize access to solar energy system planning. The core mission is to provide both individual and commercial users with the most cost-effective and efficient solar energy system configurations based on simple inputs, like daily electricity consumption. The project was built upon a modern, decoupled architecture, with a clear separation between the frontend and backend, allowing for independent development and scaling. Automated Product Catalog &amp; Price Intelligence To power the platform’s optimization engine with real-time, accurate data, I developed a dedicated web scraping service. This backend service automatically collects product, price, and stock information for key solar components (panels, inverters, cables, etc.) from various e-commerce and distributor websites. Key features of the scraping module include: Automated Product Discovery: The service identifies products that are not yet in our database, automatically adding them to the relevant product catalog. This ensures the system’s offerings remain constantly up-to-date. Dynamic Price &amp; Stock Tracking: It captures the latest price and stock availability for thousands of products, feeding this data into a centralized table. Robust &amp; Scalable Tech Stack: Built with Python using the Scrapy/Playwright framework, the service is containerized with Docker and runs as a periodic cronjob to ensure data freshness without manual intervention. Architectural Philosophy &amp; Technology Stack Backend (API): Built with FastAPI (Python) for its high performance and seamless integration with the core Python-based optimization and scraping modules. Hosted on a DigitalOcean Droplet, the API runs as a systemd service behind an Nginx reverse proxy. A Managed PostgreSQL instance serves as the database, storing user data, projects, and the extensive product catalog populated by the scraping service. User authentication is secured using stateless JWT (JSON Web Tokens). Transactional emails are handled reliably through SendGrid. Frontend (Client): Developed with Next.js 14+ (App Router) to achieve excellent SEO performance and a fast user experience. The UI is a combination of Mantine UI and Tailwind CSS. Global state management is handled cleanly with Zustand. The entire frontend is hosted on Vercel, benefiting from its seamless CI/CD pipeline. This project was a deep dive into full-stack application development, from data acquisition and system architecture to secure deployment and product launch. tech stack / keywords SaaS Architecture Web Scraping / Data Acquisition FastAPI / Python Scrapy / Playwright Next.js / React PostgreSQL JWT Authentication Docker Vercel / DigitalOcean" />
+<meta property="og:description" content="I developed solar energy system optimization tool, a comprehensive SaaS (Software as a Service) platform designed to democratize access to solar energy system planning. The core mission is to provide both individual and commercial users with the most cost-effective and efficient solar energy system configurations based on simple inputs, like daily electricity consumption. The project was built upon a modern, decoupled architecture, with a clear separation between the frontend and backend, allowing for independent development and scaling. Automated Product Catalog &amp; Price Intelligence To power the platform’s optimization engine with real-time, accurate data, I developed a dedicated web scraping service. This backend service automatically collects product, price, and stock information for key solar components (panels, inverters, cables, etc.) from various e-commerce and distributor websites. Key features of the scraping module include: Automated Product Discovery: The service identifies products that are not yet in our database, automatically adding them to the relevant product catalog. This ensures the system’s offerings remain constantly up-to-date. Dynamic Price &amp; Stock Tracking: It captures the latest price and stock availability for thousands of products, feeding this data into a centralized table. Robust &amp; Scalable Tech Stack: Built with Python using the Scrapy/Playwright framework, the service is containerized with Docker and runs as a periodic cronjob to ensure data freshness without manual intervention. Architectural Philosophy &amp; Technology Stack Backend (API): Built with FastAPI (Python) for its high performance and seamless integration with the core Python-based optimization and scraping modules. Hosted on a DigitalOcean Droplet, the API runs as a systemd service behind an Nginx reverse proxy. A Managed PostgreSQL instance serves as the database, storing user data, projects, and the extensive product catalog populated by the scraping service. User authentication is secured using stateless JWT (JSON Web Tokens). Transactional emails are handled reliably through SendGrid. Frontend (Client): Developed with Next.js 14+ (App Router) to achieve excellent SEO performance and a fast user experience. The UI is a combination of Mantine UI and Tailwind CSS. Global state management is handled cleanly with Zustand. The entire frontend is hosted on Vercel, benefiting from its seamless CI/CD pipeline. This project was a deep dive into full-stack application development, from data acquisition and system architecture to secure deployment and product launch. tech stack / keywords SaaS Architecture Web Scraping / Data Acquisition FastAPI / Python Scrapy / Playwright Next.js / React PostgreSQL JWT Authentication Docker Vercel / DigitalOcean" />
+<link rel="canonical" href="http://localhost:4000/saas/product-design/architecture/2025/08/01/solarsaas.html" />
+<meta property="og:url" content="http://localhost:4000/saas/product-design/architecture/2025/08/01/solarsaas.html" />
+<meta property="og:site_name" content="Engin Deniz Erbas - Portfolio" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-01T00:00:01+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Building a SaaS Platform from Scratch" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"enderbas"},"dateModified":"2025-08-01T00:00:01+03:00","datePublished":"2025-08-01T00:00:01+03:00","description":"I developed solar energy system optimization tool, a comprehensive SaaS (Software as a Service) platform designed to democratize access to solar energy system planning. The core mission is to provide both individual and commercial users with the most cost-effective and efficient solar energy system configurations based on simple inputs, like daily electricity consumption. The project was built upon a modern, decoupled architecture, with a clear separation between the frontend and backend, allowing for independent development and scaling. Automated Product Catalog &amp; Price Intelligence To power the platform’s optimization engine with real-time, accurate data, I developed a dedicated web scraping service. This backend service automatically collects product, price, and stock information for key solar components (panels, inverters, cables, etc.) from various e-commerce and distributor websites. Key features of the scraping module include: Automated Product Discovery: The service identifies products that are not yet in our database, automatically adding them to the relevant product catalog. This ensures the system’s offerings remain constantly up-to-date. Dynamic Price &amp; Stock Tracking: It captures the latest price and stock availability for thousands of products, feeding this data into a centralized table. Robust &amp; Scalable Tech Stack: Built with Python using the Scrapy/Playwright framework, the service is containerized with Docker and runs as a periodic cronjob to ensure data freshness without manual intervention. Architectural Philosophy &amp; Technology Stack Backend (API): Built with FastAPI (Python) for its high performance and seamless integration with the core Python-based optimization and scraping modules. Hosted on a DigitalOcean Droplet, the API runs as a systemd service behind an Nginx reverse proxy. A Managed PostgreSQL instance serves as the database, storing user data, projects, and the extensive product catalog populated by the scraping service. User authentication is secured using stateless JWT (JSON Web Tokens). Transactional emails are handled reliably through SendGrid. Frontend (Client): Developed with Next.js 14+ (App Router) to achieve excellent SEO performance and a fast user experience. The UI is a combination of Mantine UI and Tailwind CSS. Global state management is handled cleanly with Zustand. The entire frontend is hosted on Vercel, benefiting from its seamless CI/CD pipeline. This project was a deep dive into full-stack application development, from data acquisition and system architecture to secure deployment and product launch. tech stack / keywords SaaS Architecture Web Scraping / Data Acquisition FastAPI / Python Scrapy / Playwright Next.js / React PostgreSQL JWT Authentication Docker Vercel / DigitalOcean","headline":"Building a SaaS Platform from Scratch","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/saas/product-design/architecture/2025/08/01/solarsaas.html"},"url":"http://localhost:4000/saas/product-design/architecture/2025/08/01/solarsaas.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/port.png" alt="Engin Deniz Erbas" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Engin Deniz Erbas</a>
+      </h2>
+      </div><p class="tagline">Software Engineer</p></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/enderbas" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/engindenizerbas" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/about/">About Me</a>
+          </li>
+          
+          <li>
+            <a href="/portfolio/">Portfolio</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/saas/product-design/architecture/2025/08/01/solarsaas.html">
+    <h2 class="post-title">Building a SaaS Platform from Scratch</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Aug 1, 2025</div><ul class="post-categories"><li>SaaS</li><li>Product-Design</li><li>Architecture</li></ul></div>
+  <div class="post">
+    <p>I developed solar energy system optimization tool, a comprehensive SaaS (Software as a Service) platform designed to democratize access to solar energy system planning. The core mission is to provide both individual and commercial users with the most cost-effective and efficient solar energy system configurations based on simple inputs, like daily electricity consumption.</p>
+
+<p>The project was built upon a modern, decoupled architecture, with a clear separation between the frontend and backend, allowing for independent development and scaling.</p>
+
+<h3 id="automated-product-catalog--price-intelligence">Automated Product Catalog &amp; Price Intelligence</h3>
+
+<p>To power the platform’s optimization engine with real-time, accurate data, I developed a dedicated <strong>web scraping service</strong>. This backend service automatically collects product, price, and stock information for key solar components (panels, inverters, cables, etc.) from various e-commerce and distributor websites.</p>
+
+<p>Key features of the scraping module include:</p>
+<ul>
+  <li><strong>Automated Product Discovery</strong>: The service identifies products that are not yet in our database, automatically adding them to the relevant product catalog. This ensures the system’s offerings remain constantly up-to-date.</li>
+  <li><strong>Dynamic Price &amp; Stock Tracking</strong>: It captures the latest price and stock availability for thousands of products, feeding this data into a centralized table.</li>
+  <li><strong>Robust &amp; Scalable Tech Stack</strong>: Built with <strong>Python</strong> using the <strong>Scrapy/Playwright</strong> framework, the service is containerized with <strong>Docker</strong> and runs as a periodic <strong>cronjob</strong> to ensure data freshness without manual intervention.</li>
+</ul>
+
+<h3 id="architectural-philosophy--technology-stack">Architectural Philosophy &amp; Technology Stack</h3>
+
+<p><strong>Backend (API):</strong></p>
+<ul>
+  <li>Built with <strong>FastAPI (Python)</strong> for its high performance and seamless integration with the core Python-based optimization and scraping modules.</li>
+  <li>Hosted on a <strong>DigitalOcean Droplet</strong>, the API runs as a <code class="language-plaintext highlighter-rouge">systemd</code> service behind an Nginx reverse proxy.</li>
+  <li>A <strong>Managed PostgreSQL</strong> instance serves as the database, storing user data, projects, and the extensive product catalog populated by the scraping service.</li>
+  <li>User authentication is secured using stateless <strong>JWT (JSON Web Tokens)</strong>.</li>
+  <li>Transactional emails are handled reliably through <strong>SendGrid</strong>.</li>
+</ul>
+
+<p><strong>Frontend (Client):</strong></p>
+<ul>
+  <li>Developed with <strong>Next.js 14+</strong> (App Router) to achieve excellent SEO performance and a fast user experience.</li>
+  <li>The UI is a combination of <strong>Mantine UI</strong> and <strong>Tailwind CSS</strong>.</li>
+  <li>Global state management is handled cleanly with <strong>Zustand</strong>.</li>
+  <li>The entire frontend is hosted on <strong>Vercel</strong>, benefiting from its seamless CI/CD pipeline.</li>
+</ul>
+
+<p>This project was a deep dive into full-stack application development, from data acquisition and system architecture to secure deployment and product launch.</p>
+
+<h3 id="tech-stack--keywords">tech stack / keywords</h3>
+<ul>
+  <li>SaaS Architecture</li>
+  <li>Web Scraping / Data Acquisition</li>
+  <li>FastAPI / Python</li>
+  <li>Scrapy / Playwright</li>
+  <li>Next.js / React</li>
+  <li>PostgreSQL</li>
+  <li>JWT Authentication</li>
+  <li>Docker</li>
+  <li>Vercel / DigitalOcean</li>
+</ul>
+
+  </div></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/enderbas" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/engindenizerbas" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/about/">About Me</a>
+          </li>
+          
+          <li>
+            <a href="/portfolio/">Portfolio</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

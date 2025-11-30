@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function () {
     var $searchbar = document.getElementById('searchbar');
     var $searchResults = document.getElementById('search-results');
 
@@ -9,10 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput: $searchbar,
         resultsContainer: $searchResults,
         json: '/search.json',
-        searchResultTemplate: '<a href="{url}"><div class="search-title">{title}</div><div class="search-tags">{tags}</div><div class="search-preview">{content}</div></a>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: false
+        searchResultTemplate: '<a href="{url}" target="_blank">{title}</a>',
+        noResultsText: ''
     });
 
     /* hack ios safari unfocus */
@@ -43,5 +41,5 @@ document.addEventListener('DOMContentLoaded', function() {
         $postLabel.style.width = labelWidth + "px";
         document.body.onclick = null;
     };
-});
+}
 

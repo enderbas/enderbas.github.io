@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>System Design: A High-Performance Vehicle & Asset Tracking SaaS Platform</title>
+<script>
+    var host = "enderbas.github.io";
+    if ((("enderbas.github.io" == window.location.host) || ("enderbas.com" == window.location.host)) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-98CQNT3HJL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-98CQNT3HJL');
+</script>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>System Design: A High-Performance Vehicle &amp; Asset Tracking SaaS Platform | Engin Deniz Erbas - Portfolio</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="System Design: A High-Performance Vehicle &amp; Asset Tracking SaaS Platform" />
+<meta name="author" content="enderbas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Inspired by the architectural challenges of large-scale systems like Uber, I designed and implemented an end-to-end vehicle and object tracking platform. The goal was to build a robust, scalable, and real-time system capable of ingesting and processing high-velocity data streams from numerous IoT devices. The platform is built on an event-driven, microservices architecture to ensure loose coupling and independent scalability of its components. Core Architectural Components Data Ingestion: A lightweight REST API serves as the ingestion point, forwarding incoming device data to an Apache Kafka cluster. Kafka acts as the central, durable message bus, decoupling data producers from consumers and ensuring data resilience. Real-Time Stream Processing: Apache Flink is used for the core stream processing logic. It consumes data from Kafka topics in real-time to perform complex event processing, such as data enrichment, trip detection, and geofence analysis. Redis is utilized for fast, distributed state management within the Flink jobs. Data Persistence: Processed and enriched location data is persisted in a PostgreSQL database supercharged with the TimescaleDB and PostGIS extensions. This combination provides a highly efficient solution for storing, indexing, and querying vast amounts of time-series and geospatial data. Backend &amp; Real-Time Communication: A suite of backend services, developed with Node.js, exposes the processed data through a REST API for client applications. For live, real-time tracking on a user interface, a WebSocket server pushes location updates directly to connected clients. The entire system is containerized using Docker, with a docker-compose.yml file defining and managing the multi-container application environment for seamless development and deployment. tech stack / keywords System Design Event-Driven Architecture Microservices Apache Kafka Apache Flink TimescaleDB / PostGIS Redis Node.js (Express, WebSocket) Docker" />
+<meta property="og:description" content="Inspired by the architectural challenges of large-scale systems like Uber, I designed and implemented an end-to-end vehicle and object tracking platform. The goal was to build a robust, scalable, and real-time system capable of ingesting and processing high-velocity data streams from numerous IoT devices. The platform is built on an event-driven, microservices architecture to ensure loose coupling and independent scalability of its components. Core Architectural Components Data Ingestion: A lightweight REST API serves as the ingestion point, forwarding incoming device data to an Apache Kafka cluster. Kafka acts as the central, durable message bus, decoupling data producers from consumers and ensuring data resilience. Real-Time Stream Processing: Apache Flink is used for the core stream processing logic. It consumes data from Kafka topics in real-time to perform complex event processing, such as data enrichment, trip detection, and geofence analysis. Redis is utilized for fast, distributed state management within the Flink jobs. Data Persistence: Processed and enriched location data is persisted in a PostgreSQL database supercharged with the TimescaleDB and PostGIS extensions. This combination provides a highly efficient solution for storing, indexing, and querying vast amounts of time-series and geospatial data. Backend &amp; Real-Time Communication: A suite of backend services, developed with Node.js, exposes the processed data through a REST API for client applications. For live, real-time tracking on a user interface, a WebSocket server pushes location updates directly to connected clients. The entire system is containerized using Docker, with a docker-compose.yml file defining and managing the multi-container application environment for seamless development and deployment. tech stack / keywords System Design Event-Driven Architecture Microservices Apache Kafka Apache Flink TimescaleDB / PostGIS Redis Node.js (Express, WebSocket) Docker" />
+<link rel="canonical" href="http://localhost:4000/system-design/architecture/saas/data-engineering/microservices/kafka/flink/timescaledb/2025/04/01/navigation.html" />
+<meta property="og:url" content="http://localhost:4000/system-design/architecture/saas/data-engineering/microservices/kafka/flink/timescaledb/2025/04/01/navigation.html" />
+<meta property="og:site_name" content="Engin Deniz Erbas - Portfolio" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-01T00:00:01+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="System Design: A High-Performance Vehicle &amp; Asset Tracking SaaS Platform" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"enderbas"},"dateModified":"2025-04-01T00:00:01+03:00","datePublished":"2025-04-01T00:00:01+03:00","description":"Inspired by the architectural challenges of large-scale systems like Uber, I designed and implemented an end-to-end vehicle and object tracking platform. The goal was to build a robust, scalable, and real-time system capable of ingesting and processing high-velocity data streams from numerous IoT devices. The platform is built on an event-driven, microservices architecture to ensure loose coupling and independent scalability of its components. Core Architectural Components Data Ingestion: A lightweight REST API serves as the ingestion point, forwarding incoming device data to an Apache Kafka cluster. Kafka acts as the central, durable message bus, decoupling data producers from consumers and ensuring data resilience. Real-Time Stream Processing: Apache Flink is used for the core stream processing logic. It consumes data from Kafka topics in real-time to perform complex event processing, such as data enrichment, trip detection, and geofence analysis. Redis is utilized for fast, distributed state management within the Flink jobs. Data Persistence: Processed and enriched location data is persisted in a PostgreSQL database supercharged with the TimescaleDB and PostGIS extensions. This combination provides a highly efficient solution for storing, indexing, and querying vast amounts of time-series and geospatial data. Backend &amp; Real-Time Communication: A suite of backend services, developed with Node.js, exposes the processed data through a REST API for client applications. For live, real-time tracking on a user interface, a WebSocket server pushes location updates directly to connected clients. The entire system is containerized using Docker, with a docker-compose.yml file defining and managing the multi-container application environment for seamless development and deployment. tech stack / keywords System Design Event-Driven Architecture Microservices Apache Kafka Apache Flink TimescaleDB / PostGIS Redis Node.js (Express, WebSocket) Docker","headline":"System Design: A High-Performance Vehicle &amp; Asset Tracking SaaS Platform","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/system-design/architecture/saas/data-engineering/microservices/kafka/flink/timescaledb/2025/04/01/navigation.html"},"url":"http://localhost:4000/system-design/architecture/saas/data-engineering/microservices/kafka/flink/timescaledb/2025/04/01/navigation.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/port.png" alt="Engin Deniz Erbas" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Engin Deniz Erbas</a>
+      </h2>
+      </div><p class="tagline">Software Engineer</p></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/enderbas" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/engindenizerbas" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/about/">About Me</a>
+          </li>
+          
+          <li>
+            <a href="/portfolio/">Portfolio</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/system-design/architecture/saas/data-engineering/microservices/kafka/flink/timescaledb/2025/04/01/navigation.html">
+    <h2 class="post-title">System Design: A High-Performance Vehicle &amp; Asset Tracking SaaS Platform</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Apr 1, 2025</div><ul class="post-categories"><li>System-Design</li><li>Architecture</li><li>SaaS</li><li>Data-Engineering</li><li>Microservices</li><li>Kafka</li><li>Flink</li><li>TimescaleDB</li></ul></div>
+  <div class="post">
+    <p>Inspired by the architectural challenges of large-scale systems like Uber, I designed and implemented an end-to-end vehicle and object tracking platform. The goal was to build a robust, scalable, and real-time system capable of ingesting and processing high-velocity data streams from numerous IoT devices.</p>
+
+<p>The platform is built on an event-driven, microservices architecture to ensure loose coupling and independent scalability of its components.</p>
+
+<h3 id="core-architectural-components">Core Architectural Components</h3>
+
+<ul>
+  <li>
+    <p><strong>Data Ingestion</strong>: A lightweight REST API serves as the ingestion point, forwarding incoming device data to an <strong>Apache Kafka</strong> cluster. Kafka acts as the central, durable message bus, decoupling data producers from consumers and ensuring data resilience.</p>
+  </li>
+  <li>
+    <p><strong>Real-Time Stream Processing</strong>: <strong>Apache Flink</strong> is used for the core stream processing logic. It consumes data from Kafka topics in real-time to perform complex event processing, such as data enrichment, trip detection, and geofence analysis. <strong>Redis</strong> is utilized for fast, distributed state management within the Flink jobs.</p>
+  </li>
+  <li>
+    <p><strong>Data Persistence</strong>: Processed and enriched location data is persisted in a <strong>PostgreSQL</strong> database supercharged with the <strong>TimescaleDB</strong> and <strong>PostGIS</strong> extensions. This combination provides a highly efficient solution for storing, indexing, and querying vast amounts of time-series and geospatial data.</p>
+  </li>
+  <li>
+    <p><strong>Backend &amp; Real-Time Communication</strong>: A suite of backend services, developed with <strong>Node.js</strong>, exposes the processed data through a REST API for client applications. For live, real-time tracking on a user interface, a <strong>WebSocket</strong> server pushes location updates directly to connected clients.</p>
+  </li>
+</ul>
+
+<p>The entire system is containerized using <strong>Docker</strong>, with a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file defining and managing the multi-container application environment for seamless development and deployment.</p>
+
+<h3 id="tech-stack--keywords">tech stack / keywords</h3>
+<ul>
+  <li>System Design</li>
+  <li>Event-Driven Architecture</li>
+  <li>Microservices</li>
+  <li>Apache Kafka</li>
+  <li>Apache Flink</li>
+  <li>TimescaleDB / PostGIS</li>
+  <li>Redis</li>
+  <li>Node.js (Express, WebSocket)</li>
+  <li>Docker</li>
+</ul>
+
+  </div></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/enderbas" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/engindenizerbas" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a></ul><nav class="navigation about-footer condensed">
+        <ul>
+          
+          <li>
+            <a href="/about/">About Me</a>
+          </li>
+          
+          <li>
+            <a href="/portfolio/">Portfolio</a>
+          </li>
+          
+        </ul>
+      </nav><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>

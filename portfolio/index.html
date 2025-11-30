@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 </script>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Engin Deniz Erbas - Portfolio | Hi, I am Engin Deniz Erbas. I am an experienced software engineer.</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Engin Deniz Erbas - Portfolio" />
 <meta name="author" content="enderbas" />
 <meta property="og:locale" content="en_US" />
@@ -40,10 +40,6 @@
 
 
 <script type="text/javascript" src="/assets/js/darkmode.js"></script>
-
-
-<script src="/assets/js/simple-jekyll-search.min.js"></script>
-<script src="/assets/js/search.js"></script>
 
 </head><body>
   <main class="container">
@@ -105,249 +101,318 @@
         <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
       </div>
       
-    </li>
-        <li><a class="post-link" href="/portfolio/dot1x/">
-            <h2 class="post-title">IEEE 802.1X Implementation</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Jul 1, 2024
-            </div><ul class="post-tags"><li>Embedded</li></ul></div>
-          <div class="post"><p>I implemented a private network with IEEE 802.1x support using a Cisco IE3000 switch. I cross-compiled the wpa_supplicant application for an embedded Linux device and successfully ran it on the system. Additionally, I configured the required settings for integration with Windows devices.</p>
+    </li><li><a class="post-link" href="/saas/product-design/architecture/2025/08/01/solarsaas.html">
+          <h2 class="post-title">Building a SaaS Platform from Scratch</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Aug 1, 2025
+          </div><ul class="post-categories"><li>SaaS</li><li>Product-Design</li><li>Architecture</li></ul></div>
+        <div class="post"><p>I developed solar energy system optimization tool, a comprehensive SaaS (Software as a Service) platform designed to democratize access to solar energy system planning. The core mission is to provide both individual and commercial users with the most cost-effective and efficient solar energy system configurations based on simple inputs, like daily electricity consumption.</p>
+
+<p>The project was built upon a modern, decoupled architecture, with a clear separation between the frontend and backend, allowing for independent development and scaling.</p>
+
+<h3 id="automated-product-catalog--price-intelligence">Automated Product Catalog &amp; Price Intelligence</h3>
+
+<p>To power the platform’s optimization engine with real-time, accurate data, I developed a dedicated <strong>web scraping service</strong>. This backend service automatically collects product, price, and stock information for key solar components (panels, inverters, cables, etc.) from various e-commerce and distributor websites.</p>
+
+<p>Key features of the scraping module include:</p>
+<ul>
+  <li><strong>Automated Product Discovery</strong>: The service identifies products that are not yet in our database, automatically adding them to the relevant product catalog. This ensures the system’s offerings remain constantly up-to-date.</li>
+  <li><strong>Dynamic Price &amp; Stock Tracking</strong>: It captures the latest price and stock availability for thousands of products, feeding this data into a centralized table.</li>
+  <li><strong>Robust &amp; Scalable Tech Stack</strong>: Built with <strong>Python</strong> using the <strong>Scrapy/Playwright</strong> framework, the service is containerized with <strong>Docker</strong> and runs as a periodic <strong>cronjob</strong> to ensure data freshness without manual intervention.</li>
+</ul>
+
+<h3 id="architectural-philosophy--technology-stack">Architectural Philosophy &amp; Technology Stack</h3>
+
+<p><strong>Backend (API):</strong></p>
+<ul>
+  <li>Built with <strong>FastAPI (Python)</strong> for its high performance and seamless integration with the core Python-based optimization and scraping modules.</li>
+  <li>Hosted on a <strong>DigitalOcean Droplet</strong>, the API runs as a <code class="language-plaintext highlighter-rouge">systemd</code> service behind an Nginx reverse proxy.</li>
+  <li>A <strong>Managed PostgreSQL</strong> instance serves as the database, storing user data, projects, and the extensive product catalog populated by the scraping service.</li>
+  <li>User authentication is secured using stateless <strong>JWT (JSON Web Tokens)</strong>.</li>
+  <li>Transactional emails are handled reliably through <strong>SendGrid</strong>.</li>
+</ul>
+
+<p><strong>Frontend (Client):</strong></p>
+<ul>
+  <li>Developed with <strong>Next.js 14+</strong> (App Router) to achieve excellent SEO performance and a fast user experience.</li>
+  <li>The UI is a combination of <strong>Mantine UI</strong> and <strong>Tailwind CSS</strong>.</li>
+  <li>Global state management is handled cleanly with <strong>Zustand</strong>.</li>
+  <li>The entire frontend is hosted on <strong>Vercel</strong>, benefiting from its seamless CI/CD pipeline.</li>
+</ul>
+
+<p>This project was a deep dive into full-stack application development, from data acquisition and system architecture to secure deployment and product launch.</p>
+
+<h3 id="tech-stack--keywords">tech stack / keywords</h3>
+<ul>
+  <li>SaaS Architecture</li>
+  <li>Web Scraping / Data Acquisition</li>
+  <li>FastAPI / Python</li>
+  <li>Scrapy / Playwright</li>
+  <li>Next.js / React</li>
+  <li>PostgreSQL</li>
+  <li>JWT Authentication</li>
+  <li>Docker</li>
+  <li>Vercel / DigitalOcean</li>
+</ul>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/cbench/">
-            <h2 class="post-title">Benchmark and Reporting Tool Developed</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              May 1, 2024
-            </div><ul class="post-tags"><li>c</li><li>git</li></ul></div>
-          <div class="post"><p>I developed a custom benchmarking tool for an internal C language application. This tool measures the execution times of code blocks and function calls, tracks runtime variables, and generates detailed report documents</p>
+      </li><li><a class="post-link" href="/system-design/architecture/saas/data-engineering/microservices/kafka/flink/timescaledb/2025/04/01/navigation.html">
+          <h2 class="post-title">System Design: A High-Performance Vehicle &amp; Asset Tracking SaaS Platform</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Apr 1, 2025
+          </div><ul class="post-categories"><li>System-Design</li><li>Architecture</li><li>SaaS</li><li>Data-Engineering</li><li>Microservices</li><li>Kafka</li><li>Flink</li><li>TimescaleDB</li></ul></div>
+        <div class="post"><p>Inspired by the architectural challenges of large-scale systems like Uber, I designed and implemented an end-to-end vehicle and object tracking platform. The goal was to build a robust, scalable, and real-time system capable of ingesting and processing high-velocity data streams from numerous IoT devices.</p>
+
+<p>The platform is built on an event-driven, microservices architecture to ensure loose coupling and independent scalability of its components.</p>
+
+<h3 id="core-architectural-components">Core Architectural Components</h3>
+
+<ul>
+  <li>
+    <p><strong>Data Ingestion</strong>: A lightweight REST API serves as the ingestion point, forwarding incoming device data to an <strong>Apache Kafka</strong> cluster. Kafka acts as the central, durable message bus, decoupling data producers from consumers and ensuring data resilience.</p>
+  </li>
+  <li>
+    <p><strong>Real-Time Stream Processing</strong>: <strong>Apache Flink</strong> is used for the core stream processing logic. It consumes data from Kafka topics in real-time to perform complex event processing, such as data enrichment, trip detection, and geofence analysis. <strong>Redis</strong> is utilized for fast, distributed state management within the Flink jobs.</p>
+  </li>
+  <li>
+    <p><strong>Data Persistence</strong>: Processed and enriched location data is persisted in a <strong>PostgreSQL</strong> database supercharged with the <strong>TimescaleDB</strong> and <strong>PostGIS</strong> extensions. This combination provides a highly efficient solution for storing, indexing, and querying vast amounts of time-series and geospatial data.</p>
+  </li>
+  <li>
+    <p><strong>Backend &amp; Real-Time Communication</strong>: A suite of backend services, developed with <strong>Node.js</strong>, exposes the processed data through a REST API for client applications. For live, real-time tracking on a user interface, a <strong>WebSocket</strong> server pushes location updates directly to connected clients.</p>
+  </li>
+</ul>
+
+<p>The entire system is containerized using <strong>Docker</strong>, with a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file defining and managing the multi-container application environment for seamless development and deployment.</p>
+
+<h3 id="tech-stack--keywords">tech stack / keywords</h3>
+<ul>
+  <li>System Design</li>
+  <li>Event-Driven Architecture</li>
+  <li>Microservices</li>
+  <li>Apache Kafka</li>
+  <li>Apache Flink</li>
+  <li>TimescaleDB / PostGIS</li>
+  <li>Redis</li>
+  <li>Node.js (Express, WebSocket)</li>
+  <li>Docker</li>
+</ul>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/dbsync/">
-            <h2 class="post-title">Database Sycnroniser</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Dec 1, 2023
-            </div><ul class="post-tags"><li>C++</li><li>git</li></ul></div>
-          <div class="post"><p>Developed a multithreaded database synchronizer for a video analytics system. Used a C++ for this. Video analytics application generates a lot of data and this application pushes data to different databases, which located in different servers and local machines. Also it provides a backup mechanism for different data centers.</p>
+      </li><li><a class="post-link" href="/embedded/2024/07/01/dot1x.html">
+          <h2 class="post-title">IEEE 802.1X Implementation</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Jul 1, 2024
+          </div><ul class="post-categories"><li>Embedded</li></ul></div>
+        <div class="post"><p>I implemented a private network with IEEE 802.1x support using a Cisco IE3000 switch. I cross-compiled the wpa_supplicant application for an embedded Linux device and successfully ran it on the system. Additionally, I configured the required settings for integration with Windows devices.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/heatmp/">
-            <h2 class="post-title">Video Analytics People Heatmap Generator</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Oct 2, 2023
-            </div><ul class="post-tags"><li>Python</li><li>algorithms</li><li>git</li><li>Video</li><li>Analytics</li></ul></div>
-          <div class="post"><p>Developed a heatmap generator for video analytics system. Used a python for this. Used a pre-trained model for object detection. Used a python for processing and generating heatmaps.</p>
+      </li><li><a class="post-link" href="/c++/git/2023/12/01/dbsync.html">
+          <h2 class="post-title">Database Sycnroniser</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Dec 1, 2023
+          </div><ul class="post-categories"><li>C++</li><li>git</li></ul></div>
+        <div class="post"><p>Developed a multithreaded database synchronizer for a video analytics system. Used a C++ for this. Video analytics application generates a lot of data and this application pushes data to different databases, which located in different servers and local machines. Also it provides a backup mechanism for different data centers.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/peoplecounter/">
-            <h2 class="post-title">Video Analytics People Counter Algorithm</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Oct 1, 2023
-            </div><ul class="post-tags"><li>Python</li><li>algorithms</li><li>VideoAnalytics</li><li>git</li><li>GPU</li></ul></div>
-          <div class="post"><p>Developed a people counter algorithm for video analytics system. Used a deep learning model for this. Used a pre-trained model. Model outputs are processed and counted by my algorithm</p>
+      </li><li><a class="post-link" href="/python/algorithms/git/video/analytics/2023/10/02/heatmp.html">
+          <h2 class="post-title">Video Analytics People Heatmap Generator</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Oct 2, 2023
+          </div><ul class="post-categories"><li>Python</li><li>algorithms</li><li>git</li><li>Video</li><li>Analytics</li></ul></div>
+        <div class="post"><p>Developed a heatmap generator for video analytics system. Used a python for this. Used a pre-trained model for object detection. Used a python for processing and generating heatmaps.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/sketch/">
-            <h2 class="post-title">Sketch Drawing Application</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Sep 1, 2023
-            </div><ul class="post-tags"><li>Qt</li><li>C++</li><li>algorithms</li><li>git</li></ul></div>
-          <div class="post"><p>Developed a custom drawing application for inhouse usage. Integrated to company’s internal system.</p>
+      </li><li><a class="post-link" href="/python/algorithms/videoanalytics/git/gpu/2023/10/01/peoplecounter.html">
+          <h2 class="post-title">Video Analytics People Counter Algorithm</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Oct 1, 2023
+          </div><ul class="post-categories"><li>Python</li><li>algorithms</li><li>VideoAnalytics</li><li>git</li><li>GPU</li></ul></div>
+        <div class="post"><p>Developed a people counter algorithm for video analytics system. Used a deep learning model for this. Used a pre-trained model. Model outputs are processed and counted by my algorithm</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/segmentany/">
-            <h2 class="post-title">Segment Anything Algorithm</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Jun 1, 2023
-            </div><ul class="post-tags"><li>Nvidia</li><li>GPU</li><li>Python</li><li>algorithms</li><li>git</li><li>VideoAnalytics</li></ul></div>
-          <div class="post"><p>Meta’s segment anything <a href="https://github.com/facebookresearch/segment-anything">project</a> used in some projects. I developed a algorithm for finding proper car parking areas. Used a deep learning model for this. I used a pre-trained model. Used a python for testing.</p>
+      </li><li><a class="post-link" href="/qt/c++/algorithms/git/2023/09/01/sketch.html">
+          <h2 class="post-title">Sketch Drawing Application</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Sep 1, 2023
+          </div><ul class="post-categories"><li>Qt</li><li>C++</li><li>algorithms</li><li>git</li></ul></div>
+        <div class="post"><p>Developed a custom drawing application for inhouse usage. Integrated to company’s internal system.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/smartencoder/">
-            <h2 class="post-title">Smart Encoder</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              May 1, 2023
-            </div><ul class="post-tags"><li>algorithms</li><li>C++</li><li>git</li><li>Docker</li><li>VideoAnalytics</li><li>Python</li></ul></div>
-          <div class="post"><p>Developed an algorithm which address a low bandwith infrastructure. It used via companies current video analytics system. It’s a commercial product developed for specific customer needs. It allows us to use video analytics system work on low bandwith internet infrastructure.</p>
+      </li><li><a class="post-link" href="/nvidia/gpu/python/algorithms/git/videoanalytics/2023/06/01/segmentany.html">
+          <h2 class="post-title">Segment Anything Algorithm</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Jun 1, 2023
+          </div><ul class="post-categories"><li>Nvidia</li><li>GPU</li><li>Python</li><li>algorithms</li><li>git</li><li>VideoAnalytics</li></ul></div>
+        <div class="post"><p>Meta’s segment anything <a href="https://github.com/facebookresearch/segment-anything">project</a> used in some projects. I developed a algorithm for finding proper car parking areas. Used a deep learning model for this. I used a pre-trained model. Used a python for testing.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/nerf/">
-            <h2 class="post-title">Neural Radiance Fields</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              May 1, 2023
-            </div><ul class="post-tags"><li>docker</li><li>cuda</li><li>python</li><li>papers-with-code</li></ul></div>
-          <div class="post"><p>NERF repository is a collection of papers and codes about Neural Radiance Fields. It’s a new method for 3D scene representation and rendering. It’s a hot topic in computer graphics and computer vision. It’s a new way to represent 3D scenes and objects. It’s a new way to render.</p>
+      </li><li><a class="post-link" href="/algorithms/c++/git/docker/videoanalytics/python/2023/05/01/smartencoder.html">
+          <h2 class="post-title">Smart Encoder</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            May 1, 2023
+          </div><ul class="post-categories"><li>algorithms</li><li>C++</li><li>git</li><li>Docker</li><li>VideoAnalytics</li><li>Python</li></ul></div>
+        <div class="post"><p>Developed an algorithm which address a low bandwith infrastructure. It used via companies current video analytics system. It’s a commercial product developed for specific customer needs. It allows us to use video analytics system work on low bandwith internet infrastructure.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/roomsegment/">
-            <h2 class="post-title">Room Segmentation</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Apr 1, 2023
-            </div><ul class="post-tags"><li>c</li><li>ros</li><li>embedded</li><li>algorithms</li><li>papers-with-code</li></ul></div>
-          <div class="post"><p>Room segmentation is a process of dividing a given space into rooms. This process is used in many applications such as robot navigation, room recognition, and room coverage.</p>
+      </li><li><a class="post-link" href="/docker/cuda/python/papers-with-code/2023/05/01/nerf.html">
+          <h2 class="post-title">Neural Radiance Fields</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            May 1, 2023
+          </div><ul class="post-categories"><li>docker</li><li>cuda</li><li>python</li><li>papers-with-code</li></ul></div>
+        <div class="post"><p>NERF repository is a collection of papers and codes about Neural Radiance Fields. It’s a new method for 3D scene representation and rendering. It’s a hot topic in computer graphics and computer vision. It’s a new way to represent 3D scenes and objects. It’s a new way to render.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/testfwdevel/">
-            <h2 class="post-title">Emebedded Test Framework Development</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              May 1, 2022
-            </div><ul class="post-tags"><li>C++</li><li>C</li></ul></div>
-          <div class="post"><p>Developed a test framework for BMS board. Used for integration tests. Nasas JPL’s <a href="https://github.com/nasa-jpl/embedded-gcov">embedded-gcov</a> is used as a base for the test framework.</p>
+      </li><li><a class="post-link" href="/c/ros/embedded/algorithms/papers-with-code/2023/04/01/roomsegment.html">
+          <h2 class="post-title">Room Segmentation</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Apr 1, 2023
+          </div><ul class="post-categories"><li>c</li><li>ros</li><li>embedded</li><li>algorithms</li><li>papers-with-code</li></ul></div>
+        <div class="post"><p>Room segmentation is a process of dividing a given space into rooms. This process is used in many applications such as robot navigation, room recognition, and room coverage.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/embeddedintegration/">
-            <h2 class="post-title">Integration Test for Embedded Systems</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              May 1, 2022
-            </div><ul class="post-tags"><li>C</li><li>Lauterbach</li><li>Jira</li><li>git</li></ul></div>
-          <div class="post"><p>I’m the part of the team that developed the integration tests for the BMS board of an electric vehicle.</p>
+      </li><li><a class="post-link" href="/c++/c/2022/05/01/testfwdevel.html">
+          <h2 class="post-title">Emebedded Test Framework Development</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            May 1, 2022
+          </div><ul class="post-categories"><li>C++</li><li>C</li></ul></div>
+        <div class="post"><p>Developed a test framework for BMS board. Used for integration tests. Nasas JPL’s <a href="https://github.com/nasa-jpl/embedded-gcov">embedded-gcov</a> is used as a base for the test framework.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/dlp/">
-            <h2 class="post-title">Data Loss Prevention Software</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Nov 1, 2021
-            </div><ul class="post-tags"><li>C++</li><li>C</li></ul></div>
-          <div class="post"><p>Data loss prevention software developed. It’s a windows service that monitors user activity and prevents data loss. It’s a commercial product.</p>
+      </li><li><a class="post-link" href="/c/lauterbach/jira/git/2022/05/01/embeddedintegration.html">
+          <h2 class="post-title">Integration Test for Embedded Systems</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            May 1, 2022
+          </div><ul class="post-categories"><li>C</li><li>Lauterbach</li><li>Jira</li><li>git</li></ul></div>
+        <div class="post"><p>I’m the part of the team that developed the integration tests for the BMS board of an electric vehicle.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/ventilation/">
-            <h2 class="post-title">Ventilation Device Development</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Sep 1, 2021
-            </div><ul class="post-tags"><li>Qt</li><li>C++</li><li>git</li><li>Embedded</li><li>algorithms</li><li>Control</li></ul></div>
-          <div class="post"><p>Developed a device control UI and control algorithm for a mechnanic device. Used while covid-19 pandemic.</p>
+      </li><li><a class="post-link" href="/c++/c/2021/11/01/dlp.html">
+          <h2 class="post-title">Data Loss Prevention Software</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Nov 1, 2021
+          </div><ul class="post-categories"><li>C++</li><li>C</li></ul></div>
+        <div class="post"><p>Data loss prevention software developed. It’s a windows service that monitors user activity and prevents data loss. It’s a commercial product.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/mattestframework/">
-            <h2 class="post-title">Material Test Device Framework</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Sep 1, 2021
-            </div><ul class="post-tags"><li>C++</li><li>git</li><li>algorithms</li></ul></div>
-          <div class="post"><p>Developed a test runner framework for material testing machine. It’s generic and highly configurable. I develop common test runner interface, and test runner plugins for each test type. Tensile test, compression test, bending test, etc. developed as plugins.</p>
+      </li><li><a class="post-link" href="/qt/c++/git/embedded/algorithms/control/2021/09/01/ventilation.html">
+          <h2 class="post-title">Ventilation Device Development</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Sep 1, 2021
+          </div><ul class="post-categories"><li>Qt</li><li>C++</li><li>git</li><li>Embedded</li><li>algorithms</li><li>Control</li></ul></div>
+        <div class="post"><p>Developed a device control UI and control algorithm for a mechnanic device. Used while covid-19 pandemic.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/materialtesting/">
-            <h2 class="post-title">Material Testing Machine GUI Development</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Sep 1, 2021
-            </div><ul class="post-tags"><li>C++</li><li>Qt</li><li>git</li><li>Desktop</li><li>Embedded</li></ul></div>
-          <div class="post"><p>Developed a GUI for material testing machine. Machine controlled via motion controller devices and GUI integrated to these devices. Test algotihms developed according to ASTM standards. Data filtered and processed on backend service.</p>
+      </li><li><a class="post-link" href="/c++/git/algorithms/2021/09/01/mattestframework.html">
+          <h2 class="post-title">Material Test Device Framework</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Sep 1, 2021
+          </div><ul class="post-categories"><li>C++</li><li>git</li><li>algorithms</li></ul></div>
+        <div class="post"><p>Developed a test runner framework for material testing machine. It’s generic and highly configurable. I develop common test runner interface, and test runner plugins for each test type. Tensile test, compression test, bending test, etc. developed as plugins.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/bash/">
-            <h2 class="post-title">First Time Installation Script</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Oct 1, 2020
-            </div><ul class="post-tags"><li>Bash</li><li>git</li></ul></div>
-          <div class="post"><p>Bash script wrote for first time installation of application to Linux platforms.</p>
+      </li><li><a class="post-link" href="/c++/qt/git/desktop/embedded/2021/09/01/materialtesting.html">
+          <h2 class="post-title">Material Testing Machine GUI Development</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Sep 1, 2021
+          </div><ul class="post-categories"><li>C++</li><li>Qt</li><li>git</li><li>Desktop</li><li>Embedded</li></ul></div>
+        <div class="post"><p>Developed a GUI for material testing machine. Machine controlled via motion controller devices and GUI integrated to these devices. Test algotihms developed according to ASTM standards. Data filtered and processed on backend service.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/unittest/">
-            <h2 class="post-title">Unit Test Development for C++ Repositories</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Aug 1, 2020
-            </div><ul class="post-tags"><li>C++</li><li>GTest</li><li>git</li><li>unit-test</li></ul></div>
-          <div class="post"><p>I’m the part of the team that developed the unit tests for company’s internal repositories. The tests are developed in C++ language. The tests are run on the GTest framework. The source code is managed on git.</p>
+      </li><li><a class="post-link" href="/bash/git/2020/10/01/bash.html">
+          <h2 class="post-title">First Time Installation Script</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Oct 1, 2020
+          </div><ul class="post-categories"><li>Bash</li><li>git</li></ul></div>
+        <div class="post"><p>Bash script wrote for first time installation of application to Linux platforms.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/qtgui/">
-            <h2 class="post-title">GUI Development</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Aug 1, 2020
-            </div><ul class="post-tags"><li>C++</li><li>Qt</li><li>git</li><li>Desktop</li><li>Embedded</li></ul></div>
-          <div class="post"><p>Developed a many gui applications and custom widgets for customer products. Windows, Linux and embedded platforms are supported. Mostly used Qt framework for development.</p>
+      </li><li><a class="post-link" href="/c++/gtest/git/unit-test/2020/08/01/unittest.html">
+          <h2 class="post-title">Unit Test Development for C++ Repositories</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Aug 1, 2020
+          </div><ul class="post-categories"><li>C++</li><li>GTest</li><li>git</li><li>unit-test</li></ul></div>
+        <div class="post"><p>I’m the part of the team that developed the unit tests for company’s internal repositories. The tests are developed in C++ language. The tests are run on the GTest framework. The source code is managed on git.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/qtformcu/">
-            <h2 class="post-title">Qt For MCUs application development</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Aug 1, 2020
-            </div><ul class="post-tags"><li>cmake</li><li>qt</li><li>embedded</li><li>mcu</li><li>c++</li><li>git</li></ul></div>
-          <div class="post"><p>Qt for MCUs offers a lightweight graphics framework and toolkit that enables you to design, develop, and deploy graphical user interfaces (GUI) on microcontrollers (MCU). It lets you run the application either on bare metal or a real-time operating systems.</p>
+      </li><li><a class="post-link" href="/c++/qt/git/desktop/embedded/2020/08/01/qtgui.html">
+          <h2 class="post-title">GUI Development</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Aug 1, 2020
+          </div><ul class="post-categories"><li>C++</li><li>Qt</li><li>git</li><li>Desktop</li><li>Embedded</li></ul></div>
+        <div class="post"><p>Developed a many gui applications and custom widgets for customer products. Windows, Linux and embedded platforms are supported. Mostly used Qt framework for development.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/openglcube/">
-            <h2 class="post-title">Sensor Data Visualization</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Jun 1, 2020
-            </div><ul class="post-tags"><li>C</li><li>OpenGL</li><li>Embedded</li><li>STM32F4</li><li>Sensor</li><li>algorithms</li><li>git</li></ul></div>
-          <div class="post"><p>In my internship i developed a application which visualizes a movement of real object. I used a STM32F4 board for sensor data collection. IMU, Gyro, Accelerometer sensors used for data collection. Data processed on PC and visualized with OpenGL.</p>
+      </li><li><a class="post-link" href="/cmake/qt/embedded/mcu/c++/git/2020/08/01/qtformcu.html">
+          <h2 class="post-title">Qt For MCUs application development</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Aug 1, 2020
+          </div><ul class="post-categories"><li>cmake</li><li>qt</li><li>embedded</li><li>mcu</li><li>c++</li><li>git</li></ul></div>
+        <div class="post"><p>Qt for MCUs offers a lightweight graphics framework and toolkit that enables you to design, develop, and deploy graphical user interfaces (GUI) on microcontrollers (MCU). It lets you run the application either on bare metal or a real-time operating systems.</p>
 </div>
-        </li>
-        <li><a class="post-link" href="/portfolio/thesis/">
-            <h2 class="post-title">Graduation Thesis</h2>
-          </a>
-          <div class="post-meta">
-            <div class="post-date">
-              <i class="icon-calendar"></i>
-              Jan 1, 2020
-            </div><ul class="post-tags"><li>Matlab</li><li>C</li><li>Embedded</li><li>STM32F4</li><li>algorithms</li><li>git</li></ul></div>
-          <div class="post"><p>Embedded device and program developed for indoor mapping. ToF sensor data collected from device and processed on PC. Used STM32F4 as control board, used step motor for rotation, used ToF sensor for distance measurement. Data filtered and processed on PC with Matlab. Also developed a GUI for visualization.</p>
+      </li><li><a class="post-link" href="/c/opengl/embedded/stm32f4/sensor/algorithms/git/2020/06/01/openglcube.html">
+          <h2 class="post-title">Sensor Data Visualization</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Jun 1, 2020
+          </div><ul class="post-categories"><li>C</li><li>OpenGL</li><li>Embedded</li><li>STM32F4</li><li>Sensor</li><li>algorithms</li><li>git</li></ul></div>
+        <div class="post"><p>In my internship i developed a application which visualizes a movement of real object. I used a STM32F4 board for sensor data collection. IMU, Gyro, Accelerometer sensors used for data collection. Data processed on PC and visualized with OpenGL.</p>
 </div>
-        </li></ul>
+      </li><li><a class="post-link" href="/matlab/c/embedded/stm32f4/algorithms/git/2020/01/01/thesis.html">
+          <h2 class="post-title">Graduation Thesis</h2>
+        </a>
+        <div class="post-meta">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            Jan 1, 2020
+          </div><ul class="post-categories"><li>Matlab</li><li>C</li><li>Embedded</li><li>STM32F4</li><li>algorithms</li><li>git</li></ul></div>
+        <div class="post"><p>Embedded device and program developed for indoor mapping. ToF sensor data collected from device and processed on PC. Used STM32F4 as control board, used step motor for rotation, used ToF sensor for distance measurement. Data filtered and processed on PC with Matlab. Also developed a GUI for visualization.</p>
+</div>
+      </li></ul>
 
   <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
 		<use xlink:href="/assets/minima-social-icons.svg#rss"></use>
@@ -388,6 +453,10 @@
   </main>
   
   <script type="text/javascript" src="/assets/js/darkmode.js"></script>
-  </body>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
 
 </html>
